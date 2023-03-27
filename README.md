@@ -1,4 +1,8 @@
 <h1> Network Protocols and Traffic Observation</h1>
+<p align="center">
+<img src="https://abouconde335669239.files.wordpress.com/2018/12/imagesa040026w.png" height="25%" width="25%" alt="Network Security Group Logo"/>
+</p>
+
 <h2> Environment and Technology </h2>  
 
 - Microsoft Azure
