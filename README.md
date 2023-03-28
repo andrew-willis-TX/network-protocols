@@ -12,14 +12,43 @@
 
 <h2> Setup/Configuration Steps </h2>
 
-1. Create a Windows 10 VM
-2. Create and Ubunut VM. Make sure it is in the same reource group and virtual network as the Windows 10 VM
+1. Create a Windows 10 VM.  
+<p align="center">
+<img src="https://i.imgur.com/5InKzKl.png" height="50%" width="50%" alt="Creating a Windows 10 VM"/>
+</p>
+
+2. Create an Ubuntu VM. Make sure it is in the same reource group and virtual network as the Windows 10 VM.
+<p align="center">
+<img src="https://i.imgur.com/FQH71iM.png" height="50%" width="50%" alt="Creating an Ubuntu VM"/>
+
 3. Check topology in Azure Network Watcher to verify both machines are on the same network.
-4. Use Remote Desktop to log in to the Windows 10 VM
-5. Install Wireshark on Windows 10 VM
-6. From the Windows 10 VM, ping the private IP address of the Ubunut VM
+<p align="center">
+<img src="https://i.imgur.com/vtjYqYD.png" height="50%" width="50%" alt="Checking the Virtual Network topology"/>
+
+4. Use Remote Desktop to log in to the Windows 10 VM.
+<p align="center">
+<img src="https://i.imgur.com/5etBbcu.png" height="50%" width="50%" alt="Logging in to VM1 through Remote Desktop."/>
+</p>
+
+5. Install Wireshark on Windows 10 VM. Use the default installation settings.
+<p align="center">
+<img src="https://i.imgur.com/pfWJcrF.png" height="50%" width="50%" alt="Installing Wireshark Protocol Analyzer"/>
+
+6. From the Windows 10 VM, using PowerShell, ping the private IP address of the Ubuntu VM. 
+<p align="center">
+<img src="https://i.imgur.com/bIaHPPd.png" height="50%" width="50%" alt="Pinging VM2's private IP from VM1."/>
+</p>
+
 7. Open Wireshark and filter for ICMP traffic.
-8. Observe the ping requests and replies within wireshark. 
+<p align="center">
+<img src="https://i.imgur.com/fPTdFpb.png" height="50%" width="50%" alt="Filtering Wireshark to show ICMP traffic only"/>
+</p>
+
+8. Observe the ping requests and replies within Wireshark. 
+<p align="center">
+<img src="https://i.imgur.com/tvUfkbU.png" height="50%" width="50%" alt="ICMP traffic showing due to ping we sent from PowerSehll."/>
+</p>
+
 9. From the Windows 10 VM, use command line to ping a public website such as google.com.
 10. Observe the traffic in Wireshark
 11. Use command line on Windows 10 VM to perpetually ping ("ping -t private ip") the Ubunutu VM.
