@@ -49,18 +49,25 @@
 <img src="https://i.imgur.com/tvUfkbU.png" height="50%" width="50%" alt="ICMP traffic showing due to ping we sent from PowerSehll."/>
 </p>
 
-9. From the Windows 10 VM, use command line to ping a public website such as google.com.
-10. Observe the traffic in Wireshark
-11. Use command line on Windows 10 VM to perpetually ping ("ping -t private ip") the Ubunutu VM.
-12. Within the Ubuntu VM, open Network Security Groups and disable all inbound ICMP traffic
-13. Within the Windows 10 VM, observe the ICMP traffic and command line activity
-14. Within the Ubuntu VM, re-enable inbound ICMP traffic.
-15. Within the Windows 10 VM, observe the ICMP traffic and command line activity. Then, end the ping ("ctrl + c").
-16. Within Wireshark, filter for DHCP traffic only
-17. Within the Windows 10 VM, attempt to issue the Ubuntu VM a new IP Address from the command line ("ipconfig /renew"). Observe the traffic in Wireshark.
-18. Within the Windows 10 VM, filter Wireshark for DNS traffic.
-19. Within the Windows 10 VM, use command line ("nslookup") to check the IP address of a few public websites. Observe the DNS traffic in Wireshark.
-20. Within the Windows 10 VM, filter Wireshark for RDP traffic (tcp port == 3389. Observe the immediate and non-stop traffic
-21. Close Remote Desktops and delete Azure resources
+9. From the Windows 10 VM, use PowerShell to ping a public website such as google. Observe the traffic in Wireshark.  
+<p align="center">
+ <img src="https://i.imgur.com/pdRiJUj.png" height="50%" width="50%" alt="Observing ICMP traffic from google ping."/>
+ </p>
+ 
+10. Use PowerShell on Windows 10 VM to perpetually ping ("ping -t private ip") the Ubunutu VM.
+<p align="center">
+ <img src="https://i.imgur.com/tJxdj75.png" height="50%" width="50%" alt="Observe the traffic from the perpetual ping command."/>
+ </p>
+ 
+11. Within the Ubuntu VM, open Network Security Groups and disable all inbound ICMP traffic
+14. Within the Windows 10 VM, observe the ICMP traffic and command line activity
+15. Within the Ubuntu VM, re-enable inbound ICMP traffic.
+16. Within the Windows 10 VM, observe the ICMP traffic and command line activity. Then, end the ping ("ctrl + c").
+17. Within Wireshark, filter for DHCP traffic only
+18. Within the Windows 10 VM, attempt to issue the Ubuntu VM a new IP Address from the command line ("ipconfig /renew"). Observe the traffic in Wireshark.
+19. Within the Windows 10 VM, filter Wireshark for DNS traffic.
+20. Within the Windows 10 VM, use command line ("nslookup") to check the IP address of a few public websites. Observe the DNS traffic in Wireshark.
+21. Within the Windows 10 VM, filter Wireshark for RDP traffic (tcp port == 3389. Observe the immediate and non-stop traffic
+22. Close Remote Desktops and delete Azure resources
  
 
