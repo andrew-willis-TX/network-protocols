@@ -54,16 +54,58 @@
  <img src="https://i.imgur.com/pdRiJUj.png" height="50%" width="50%" alt="Observing ICMP traffic from google ping."/>
  </p>
  
-10. Use PowerShell on Windows 10 VM to perpetually ping ("ping -t private ip") the Ubunutu VM.
+10. Use PowerShell on Windows 10 VM to perpetually ping the Ubuntu VM.
 <p align="center">
  <img src="https://i.imgur.com/tJxdj75.png" height="50%" width="50%" alt="Observe the traffic from the perpetual ping command."/>
  </p>
  
-11. Within the Ubuntu VM, open Network Security Groups and disable all inbound ICMP traffic
-14. Within the Windows 10 VM, observe the ICMP traffic and command line activity
-15. Within the Ubuntu VM, re-enable inbound ICMP traffic.
-16. Within the Windows 10 VM, observe the ICMP traffic and command line activity. Then, end the ping ("ctrl + c").
-17. Within Wireshark, filter for DHCP traffic only
+11. Within Microsoft Azure, open Network Security Groups and disable all inbound ICMP traffic for the Ubuntu VM. 
+<p align="center">
+<img src="https://i.imgur.com/t0jxtfH.png" height="50%" width="50%" alt="Disabiling all inbound ICMP traffic."/>
+</p>
+
+12. Within the Windows 10 VM, observe the traffic has stopped in Wireshark and the requests have timed out in PowerShell.
+<p align="center">
+<img src="https://i.imgur.com/EmJGpfs.png" height="50%" width="50%" alt="Observe the stopped traffic in Wireshark and the request timed out messages in PowerShell."/>
+</p>
+
+13. Within Microsoft Azure, enable inbound ICMP traffic for the Ubuntu VM.
+<p align="center">
+<img src="https://i.imgur.com/0yn3zbO.png" height="50%" width="50%" alt="Enabling ICMP traffic for Ubuntu VM."/>
+</p>
+
+14. Within the Windows 10 VM, observe the ICMP traffic and command line activity. Then, end the ping.
+<p align="center">
+<img src="https://i.imgur.com/Pv1J8qz.png" height="50%" width="50%" alt="Observe the new flow of traffic in Wireshark and PowerShell."/>
+</p>
+
+15. Within the Windows 10 VM, filter Wireshark for SSH traffic.
+<p align="center">
+<img src="https://i.imgur.com/HclmUUh.png" height="50%" width="50%" alt="Filtering Wireshark for SSH traffic."/>
+</p>
+
+16. From the Windows 10 VM, use SSH to log in to the Ubuntu VM via its private IP address. Observe the SSH traffic. 
+<p align="center">
+<img src="https://i.imgur.com/fmzskLp.png" height="50%" width="50%" alt="Using SSH to access another machine remotely."/>
+</p>
+
+17. Enter various Linux commands and observe the SSH traffic. 
+<p align="center">
+<img src="https://i.imgur.com/jp4c1Vv.png" height="50%" width="50%" alt="Using Linux commands to observe SSH traffic."/>
+</p>
+<p align="center">
+<img src="https://i.imgur.com/JAcIF9g.png" height="50%" width="50%" alt="Using Linux commands to observe SSH traffic."/>
+</p>
+<p align="center">
+<img src="https://i.imgur.com/qeLWZkl.png" height="50%" width="50%" alt="Using Linux commands to observe SSH traffic."/>
+</p>
+
+18. Close the SSH connection to the Ubuntu VM. 
+<p align="center">
+<img src="https://i.imgur.com/5Jaqsmd.png" height="50%" width="50%" alt="Close the SSH connection."/>
+</p>
+
+19. Within Wireshark, filter for DHCP traffic only
 18. Within the Windows 10 VM, attempt to issue the Ubuntu VM a new IP Address from the command line ("ipconfig /renew"). Observe the traffic in Wireshark.
 19. Within the Windows 10 VM, filter Wireshark for DNS traffic.
 20. Within the Windows 10 VM, use command line ("nslookup") to check the IP address of a few public websites. Observe the DNS traffic in Wireshark.
