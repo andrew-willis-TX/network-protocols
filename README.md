@@ -105,11 +105,35 @@
 <img src="https://i.imgur.com/5Jaqsmd.png" height="50%" width="50%" alt="Close the SSH connection."/>
 </p>
 
-19. Within Wireshark, filter for DHCP traffic only
-18. Within the Windows 10 VM, attempt to issue the Ubuntu VM a new IP Address from the command line ("ipconfig /renew"). Observe the traffic in Wireshark.
-19. Within the Windows 10 VM, filter Wireshark for DNS traffic.
-20. Within the Windows 10 VM, use command line ("nslookup") to check the IP address of a few public websites. Observe the DNS traffic in Wireshark.
-21. Within the Windows 10 VM, filter Wireshark for RDP traffic (tcp port == 3389. Observe the immediate and non-stop traffic
-22. Close Remote Desktops and delete Azure resources
+19. Within Wireshark, filter for DHCP traffic only.
+<p align="center">
+ <img src="https://i.imgur.com/UOco6b3.png" height="50%" width="50%" alt="Filtering Wireshark for DHCP traffic only."/>
+ </p>
+ 
+20. Within the Windows 10 VM, attempt to issue the Ubuntu VM a new IP Address from the command line ("ipconfig /renew"). Observe the traffic in Wireshark.
+<p align="center">
+ <img src="https://i.imgur.com/LtVHM9c.png" height="50%" width="50%" alt="DHCP traffic in Wireshark after the ipconfig renew command."/>
+ </p>
+ 
+21. Within the Windows 10 VM, filter Wireshark for DNS traffic.
+<p align="center">
+ <img src="https://i.imgur.com/S2xhjD7.png" height="50%" width="50%" alt="Filtering Wireshark for DNS traffic."/>
+ </p>
+ 
+22. Within the Windows 10 VM, use command line ("nslookup") to check the IP address of a few public websites. Observe the DNS traffic in Wireshark.
+<p align="center">
+ <img src="https://i.imgur.com/oIBHSXk.png" height="50%" width="50%" alt="nslookup command shows DNS traffic in Wireshark."/>
+ </p>
+ 
+23. Within Wireshark, filter for udp.port==53. This is the port that DNS queries use. Run the nslookup command for another website. Observe the DNS traffic.
+<p align="center">
+ <img src="https://i.imgur.com/Bnqpte3.png" height="50%" width="50%" alt="Filtering Wireshark for DNS traffic using udp port 53."/>
+ </p>
+
+24. Within the Windows 10 VM, filter Wireshark for RDP traffic (tcp port == 3389. Observe the immediate and non-stop traffic.
+<p align="center">
+ <img src="https://i.imgur.com/ab9eLKf.png" height="50%" width="50%" alt="Filtering Wireshark for RDP traffic."/>
+</p>
+
  
 
