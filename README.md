@@ -7,7 +7,9 @@
 
 - Microsoft Azure
 - Windows 10 VM
-- Ubunutu VM
+- Ubuntu VM
+- PowerShell
+- SSH
 - Wireshark  
 
 <h2> Setup/Configuration Steps </h2>
